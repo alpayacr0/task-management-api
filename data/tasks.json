@@ -1,0 +1,75 @@
+{
+  "lastId": 9,
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Kullanıcı girişi sayfasını tasarla",
+      "description": "Login ekranı için wireframe hazırlanacak.",
+      "status": "done",
+      "priority": "high",
+      "assignee": "Ayşe Yılmaz",
+      "createdAt": "2026-10-01T09:00:00.000Z",
+      "updatedAt": "2026-10-05T14:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Veritabanı şemasını çıkar",
+      "description": "Kullanıcı ve görev tabloları planlanacak.",
+      "status": "in-progress",
+      "priority": "high",
+      "assignee": "Mehmet Kaya",
+      "createdAt": "2026-10-02T10:15:00.000Z",
+      "updatedAt": "2026-10-08T11:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "API dokümantasyonunu yaz",
+      "description": "Endpoint listesi ve örnek istekler eklenecek.",
+      "status": "todo",
+      "priority": "medium",
+      "assignee": "",
+      "createdAt": "2026-10-03T08:45:00.000Z",
+      "updatedAt": "2026-10-03T08:45:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Hata loglama altyapısını kur",
+      "description": "",
+      "status": "in-progress",
+      "priority": "medium",
+      "assignee": "Zeynep Demir",
+      "createdAt": "2026-10-04T13:20:00.000Z",
+      "updatedAt": "2026-10-09T16:10:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "Login butonunun rengini düzelt",
+      "description": "Marka renk koduna uygun hale getirilecek.",
+      "status": "todo",
+      "priority": "low",
+      "assignee": "Ayşe Yılmaz",
+      "createdAt": "2026-10-06T09:30:00.000Z",
+      "updatedAt": "2026-10-06T09:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Haftalık ilerleme raporunu hazırla",
+      "description": "Tamamlanan ve geciken görevler özetlenecek.",
+      "status": "todo",
+      "priority": "low",
+      "assignee": "",
+      "createdAt": "2026-10-10T15:00:00.000Z",
+      "updatedAt": "2026-10-10T15:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "title": "Api testi ikinci aşama",
+      "description": "Task api test aşaması deneme:1",
+      "status": "in-progress",
+      "priority": "medium",
+      "assignee": "Alpay Acar",
+      "createdAt": "2026-10-14T21:10:37.207Z",
+      "updatedAt": "2026-10-14T21:10:37.207Z"
+    }
+  ]
+}
