@@ -43,7 +43,7 @@ router.get("/:id", (req, res) => {
   res.json(task);
 });
 
-router.put("/:id", validateTaskUpdate, (req, res) => {
+router.patch("/:id", validateTaskUpdate, (req, res) => {
   const tasks = readFile();
   const taskIndex = tasks.tasks.findIndex(
     (t) => t.id === parseInt(req.params.id),
@@ -54,11 +54,19 @@ router.put("/:id", validateTaskUpdate, (req, res) => {
 
   const updatedTask = {
     ...tasks.tasks[taskIndex],
-    title: req.body.title.trim(),
-    description: req.body.description || tasks.tasks[taskIndex].description,
+    title: req.body.title
+      ? req.body.title.trim()
+      : tasks.tasks[taskIndex].title,
+    description:
+      req.body.description !== undefined
+        ? req.body.description
+        : tasks.tasks[taskIndex].description,
     status: req.body.status || tasks.tasks[taskIndex].status,
     priority: req.body.priority || tasks.tasks[taskIndex].priority,
-    assignee: req.body.assignee || tasks.tasks[taskIndex].assignee,
+    assignee:
+      req.body.assignee !== undefined
+        ? req.body.assignee
+        : tasks.tasks[taskIndex].assignee,
     updatedAt: new Date().toISOString(),
   };
 

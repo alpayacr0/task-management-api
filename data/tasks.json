@@ -1,5 +1,5 @@
 {
-  "lastId": 9,
+  "lastId": 10,
   "tasks": [
     {
       "id": 1,
@@ -45,31 +45,21 @@
       "id": 5,
       "title": "Login butonunun rengini düzelt",
       "description": "Marka renk koduna uygun hale getirilecek.",
-      "status": "todo",
-      "priority": "low",
-      "assignee": "Ayşe Yılmaz",
-      "createdAt": "2026-10-06T09:30:00.000Z",
-      "updatedAt": "2026-10-06T09:30:00.000Z"
-    },
-    {
-      "id": 7,
-      "title": "Haftalık ilerleme raporunu hazırla",
-      "description": "Tamamlanan ve geciken görevler özetlenecek.",
-      "status": "todo",
+      "status": "in-progress",
       "priority": "low",
       "assignee": "",
-      "createdAt": "2026-10-10T15:00:00.000Z",
-      "updatedAt": "2026-10-10T15:00:00.000Z"
+      "createdAt": "2026-10-06T09:30:00.000Z",
+      "updatedAt": "2026-10-15T21:50:49.623Z"
     },
     {
-      "id": 9,
-      "title": "Api testi ikinci aşama",
-      "description": "Task api test aşaması deneme:1",
+      "id": 10,
+      "title": "Api testi üçüncü aşama",
+      "description": "Task api test aşaması deneme:3",
       "status": "in-progress",
       "priority": "medium",
       "assignee": "Alpay Acar",
-      "createdAt": "2026-10-14T21:10:37.207Z",
-      "updatedAt": "2026-10-14T21:10:37.207Z"
+      "createdAt": "2026-10-15T21:52:25.580Z",
+      "updatedAt": "2026-10-15T21:52:25.580Z"
     }
   ]
 }
