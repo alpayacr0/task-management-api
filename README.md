@@ -169,18 +169,39 @@ Her istek konsola zaman damgası, metot ve URL ile yazılır:
 
 ## Testler
 
-Tüm CRUD endpoint'leri Postman ile test edilmiştir. Ekran görüntüleri `screenshots/` klasöründedir:
+Tüm CRUD endpoint'leri Postman ile test edilmiştir.
 
-| Test                        | Görüntü                                    |
-| --------------------------- | ------------------------------------------ |
-| Görev ekleme (POST)         | `screenshots/T1-post-gorev-ekle.png`       |
-| Görev listeleme (GET)       | `screenshots/T2-get-gorev-listele.png`     |
-| Görev detayı (GET)          | `screenshots/T3-get-gorev-detay.png`       |
-| Görev güncelleme (PATCH)    | `screenshots/T4-patch-gorev-guncelle.png`  |
-| Görev silme (DELETE)        | `screenshots/T5-delete-gorev-sil.png`      |
-| Hata: başlıksız görev (400) | `screenshots/E1-post-baslik-yok-400.png`   |
-| Hata: olmayan görev (404)   | `screenshots/E2-get-olmayan-gorev-404.png` |
-| Logger çıktısı              | `screenshots/L1-logger-terminal.png`       |
+### Görev ekleme (POST)
+
+![Görev ekleme](screenshots/T1-post-gorev-ekle.png)
+
+### Görev listeleme (GET)
+
+![Görev listeleme](screenshots/T2-get-gorev-listele.png)
+
+### Görev detayı (GET)
+
+![Görev detayı](screenshots/T3-get-gorev-detay.png)
+
+### Görev güncelleme (PATCH)
+
+![Görev güncelleme](screenshots/T4-patch-gorev-guncelle.png)
+
+### Görev silme (DELETE)
+
+![Görev silme](screenshots/T5-delete-gorev-sil.png)
+
+### Hata: başlıksız görev (400)
+
+![Başlıksız görev](screenshots/E1-post-baslik-yok-400.png)
+
+### Hata: olmayan görev (404)
+
+![Olmayan görev](screenshots/E2-get-olmayan-gorev-404.png)
+
+### Logger çıktısı
+
+![Logger](screenshots/L1-logger-terminal.png)
 
 ## Bilinen Sınırlamalar
 
