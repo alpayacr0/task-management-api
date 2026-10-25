@@ -189,7 +189,7 @@ Tüm CRUD endpoint'leri Postman ile test edilmiştir.
 
 ### Görev silme (DELETE)
 
-![Görev silme](screenshots/T5-delete-gorev-sil.png.png)
+![Görev silme](screenshots/T5-delete-gorev-sil.png)
 
 ### Hata: başlıksız görev (400)
 
