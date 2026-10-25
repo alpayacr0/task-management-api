@@ -6,8 +6,74 @@ const validateTaskUpdate = require("../middleware/validateUpdate");
 
 // get all tasks
 router.get("/", (req, res) => {
-  const tasks = readFile();
-  res.json(tasks.tasks);
+  const {
+    status,
+    priority,
+    keyword,
+    assignee,
+    page = "1",
+    limit = "2",
+    sort = "createdAt",
+  } = req.query;
+
+  const pageNum = parseInt(page);
+  const limitNum = parseInt(limit);
+
+  let tasks = readFile().tasks;
+
+  // filter by status
+  if (status) {
+    tasks = tasks.filter((task) => task.status === status);
+  }
+
+  // filter by priority
+  if (priority) {
+    tasks = tasks.filter((task) => task.priority === priority);
+  }
+
+  // filter by assignee
+  if (assignee) {
+    const lowerAssignee = assignee.toLowerCase();
+    tasks = tasks.filter((task) =>
+      task.assignee.toLowerCase().includes(lowerAssignee),
+    );
+  }
+
+  // filter by keyword in title or description
+  if (keyword) {
+    const lowerKeyword = keyword.toLowerCase();
+    tasks = tasks.filter(
+      (task) =>
+        task.title.toLowerCase().includes(lowerKeyword) ||
+        task.description.toLowerCase().includes(lowerKeyword),
+    );
+  }
+
+  // sort tasks
+  const validSortFields = ["createdAt", "updatedAt", "priority"];
+  if (!validSortFields.includes(sort)) {
+    return res.status(400).json({
+      error: `Invalid sort field. Valid fields are: ${validSortFields.join(
+        ", ",
+      )}.`,
+    });
+  }
+
+  if (sort === "priority") {
+    const priorityOrder = { high: 1, medium: 2, low: 3 };
+    tasks.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
+  } else if (sort === "updatedAt") {
+    tasks.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+  } else if (sort === "createdAt") {
+    tasks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  }
+
+  // pagination
+  const startIndex = (pageNum - 1) * limitNum;
+  const endIndex = startIndex + limitNum;
+  tasks = tasks.slice(startIndex, endIndex);
+
+  res.json(tasks);
 });
 
 // create a new task
