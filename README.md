@@ -92,6 +92,33 @@ Temel yol: `/tasks`
 
 Doğrulama ve bulunamadı hataları `{ "error": "..." }` biçiminde döner.
 
+### Sayfalama (Pagination)
+
+Görev listesini sayfalara bölmek için `/tasks` endpoint'ine `page` ve `limit` query parametrelerini ekleyin:
+
+| Parametre | Açıklama | Varsayılan |
+| --------- | -------- | ---------- |
+| `page`    | İstenen sayfa numarası (1'den başlar) | `1` |
+| `limit`   | Sayfa başına getirilecek görev sayısı | `2` |
+
+Canlı API'de ilk sayfadan 10 görev almak için:
+
+```http
+GET https://api.alpayacar.com/tasks?page=1&limit=10
+```
+
+Sonraki sayfaya geçmek için `page` değerini artırın:
+
+```http
+GET https://api.alpayacar.com/tasks?page=2&limit=10
+```
+
+Yanıt, istenen sayfadaki görevleri içeren bir JSON dizisidir. Sayfalama; `status`, `priority`, `assignee` ve `keyword` filtreleri ile `sort` sıralamasıyla birlikte kullanılabilir. Örneğin, tamamlanmış görevlerin ikinci sayfasını almak için:
+
+```http
+GET https://api.alpayacar.com/tasks?status=done&page=2&limit=10
+```
+
 ## Veri Modeli
 
 | Alan        | Tip                | Zorunlu  | Açıklama                                          |
